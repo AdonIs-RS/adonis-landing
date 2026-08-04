@@ -80,11 +80,11 @@
     ]
   },
   "trust": {
-    "eyebrow": "Ce qu'on nous oppose souvent",
-    "title": "Ce n'est pas un gadget IA",
+    "eyebrow": "Quelques réponses à vos questions",
+    "title": "Adonis - Votre partenaire IA, au service de votre performance",
     "objections": [
       {
-        "question": "\"Mes commerciaux vont perdre leur personnalité.\"",
+        "question": "\"Mes commerciaux ne vont-ils pas perdre leur personnalité?\"",
         "answer": "Adonis fournit une base d'accroche, pas un texte à réciter. Le commercial garde sa voix, Adonis lui donne l'angle."
       },
       {
@@ -92,8 +92,8 @@
         "answer": "Le modèle s'appuie uniquement sur des signaux publics et documentés. Chaque script est vérifiable et review avant envoi en configuration standard."
       },
       {
-        "question": "\"On utilise déjà l'IA, pourquoi Adonis ?\"",
-        "answer": "Adonis ne génère pas du contenu marketing générique : il prépare l'appel à froid, prospect par prospect, directement dans votre CRM."
+        "question": "\"On utilise déjà l'IA, pourquoi Adonis ferait mieux ?\"",
+        "answer": "Adonis ne génère pas du contenu marketing générique : il prépare l'appel à froid, de façon personnalisé, en fonction de votre prospect, et injecte le script directement dans votre CRM."
       }
     ]
   },
