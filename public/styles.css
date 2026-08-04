@@ -373,11 +373,13 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .btn-primary, .nav-cta { transition: none; }
 }
-.video-section { background: var(--paper-raised); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .demo-video {
   width: 100%;
   max-width: 720px;
+  aspect-ratio: 16 / 9;
   display: block;
   margin: 0 auto;
   border-radius: 6px;
   box-shadow: 0 4px 24px rgba(18,19,26,0.12);
+  border: none;
+}
