@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Adonis — Administration</title>
+<style>
+  body { font-family: 'Inter', sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1.5rem; color: #12131a; }
+  h1 { font-size: 1.4rem; }
+  h2 { font-size: 1.05rem; margin-top: 2.5rem; border-top: 1px solid #ddd; padding-top: 1.5rem; }
+  label { display: block; font-size: 0.8rem; color: #555; margin: 1rem 0 0.25rem; }
+  input, textarea { width: 100%; padding: 0.6rem; font-size: 0.9rem; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; }
+  textarea { min-height: 60px; resize: vertical; }
+  button { margin-top: 1.5rem; padding: 0.7rem 1.4rem; background: #12131a; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.9rem; }
+  button:hover { background: #332f9c; }
+  #status { margin-top: 1rem; font-size: 0.9rem; }
+  .pwd-box { background: #f2f2ef; padding: 1rem; border-radius: 6px; margin-bottom: 1.5rem; }
+  table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.85rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem; text-align: left; }
+  .repeat-item { border: 1px solid #eee; padding: 0.75rem; border-radius: 6px; margin-top: 0.75rem; }
+</style>
+</head>
+<body>
+
+<h1>Adonis — Administration du contenu</h1>
+<p>Modifie les textes de la landing page ici, puis clique sur "Enregistrer". Les changements sont visibles immédiatement sur la page publique.</p>
+
+<div class="pwd-box">
+  <label for="password">Mot de passe admin</label>
+  <input type="password" id="password" placeholder="Mot de passe" />
+</div>
+
+<div id="form-container">Chargement du contenu...</div>
+
+<button id="save-btn">Enregistrer les modifications</button>
+<p id="status"></p>
+
+<h2>Leads reçus</h2>
+<button id="load-leads-btn">Charger les leads</button>
+<div id="leads-container"></div>
+
+<script src="admin.js"></script>
+</body>
+</html>

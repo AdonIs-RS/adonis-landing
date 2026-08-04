@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Adonis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="logo" id="nav-logo">Adonis</span>
+    <a class="nav-cta" id="nav-cta" href="#demo">Réserver ma démo</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow" id="hero-eyebrow"></p>
+    <h1 class="hero-headline" id="hero-headline"></h1>
+    <p class="hero-sub" id="hero-sub"></p>
+    <div class="hero-actions">
+      <a class="btn-primary" id="hero-cta" href="#demo"></a>
+      <span class="hero-cta-sub" id="hero-cta-sub"></span>
+    </div>
+    <div class="hero-stat">
+      <span class="stat-label" id="hero-stat-label"></span>
+      <span class="stat-value" id="hero-stat-value"></span>
+      <span class="stat-caption" id="hero-stat-caption"></span>
+    </div>
+  </div>
+</header>
+
+<section class="script-demo">
+  <div class="section-inner">
+    <p class="eyebrow" id="demo-eyebrow"></p>
+    <h2 class="section-title" id="demo-title"></h2>
+    <div class="script-grid">
+      <div class="script-card script-generic">
+        <span class="script-label" id="demo-generic-label"></span>
+        <ul class="script-lines" id="demo-generic-lines"></ul>
+      </div>
+      <div class="script-arrow">→</div>
+      <div class="script-card script-adonis">
+        <span class="script-label" id="demo-adonis-label"></span>
+        <ul class="script-lines" id="demo-adonis-lines"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="section-inner">
+    <p class="eyebrow" id="problem-eyebrow"></p>
+    <h2 class="section-title" id="problem-title"></h2>
+    <div class="problem-grid" id="problem-grid"></div>
+  </div>
+</section>
+
+<section class="solution">
+  <div class="section-inner">
+    <p class="eyebrow" id="solution-eyebrow"></p>
+    <h2 class="section-title" id="solution-title"></h2>
+    <div class="solution-grid" id="solution-grid"></div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="section-inner">
+    <p class="eyebrow" id="trust-eyebrow"></p>
+    <h2 class="section-title" id="trust-title"></h2>
+    <div class="trust-grid" id="trust-grid"></div>
+  </div>
+</section>
+
+<section class="final-cta" id="demo">
+  <div class="section-inner final-cta-inner">
+    <div class="final-cta-left">
+      <h2 class="section-title" id="final-title"></h2>
+      <p class="final-sub" id="final-sub"></p>
+      <a class="btn-primary" id="final-cta-btn" href="#" target="_blank" rel="noopener"></a>
+    </div>
+    <div class="final-cta-right">
+      <h3 id="form-title"></h3>
+      <p class="form-sub" id="form-sub"></p>
+      <form id="lead-form">
+        <input type="text" name="name" placeholder="Nom" required />
+        <input type="email" name="email" placeholder="Email professionnel" required />
+        <input type="text" name="company" placeholder="Entreprise" />
+        <input type="text" name="teamSize" placeholder="Taille de l'équipe commerciale" />
+        <button type="submit">Envoyer</button>
+        <p class="form-message" id="form-message"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p id="footer-text"></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
