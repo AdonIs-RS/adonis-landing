@@ -106,6 +106,9 @@ document.getElementById('lead-form').addEventListener('submit', async (e) => {
     });
     if (!res.ok) throw new Error('failed');
     message.textContent = 'Merci ! Nous revenons vers vous sous 24h.';
+    if (typeof gtag === 'function') {
+  gtag('event', 'soumission_formulaire_lead');
+}
     message.style.color = '#2f7a3d';
     form.reset();
   } catch (err) {
