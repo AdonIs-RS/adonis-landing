@@ -157,19 +157,22 @@ document.getElementById('load-leads-btn').addEventListener('click', async () => 
       return;
     }
     container.innerHTML = `
-      <table>
-        <tr><th>Nom</th><th>Email</th><th>Entreprise</th><th>Taille équipe</th><th>Date</th></tr>
-        ${data.leads.map(l => `
-          <tr>
-            <td>${escText(l.name)}</td>
-            <td>${escText(l.email)}</td>
-            <td>${escText(l.company)}</td>
-            <td>${escText(l.teamSize)}</td>
-            <td>${new Date(l.submittedAt).toLocaleString('fr-FR')}</td>
-          </tr>
-        `).join('')}
-      </table>
-    `;
+  <table>
+    <tr><th>Nom</th><th>Email</th><th>Entreprise</th><th>Poste</th><th>Localisation</th><th>LinkedIn</th><th>Taille équipe</th><th>Date</th></tr>
+    ${data.leads.map(l => `
+      <tr>
+        <td>${escText(l.name)}</td>
+        <td>${escText(l.email)}</td>
+        <td>${escText(l.company)}</td>
+        <td>${escText(l.jobTitle || '')}</td>
+        <td>${escText(l.location || '')}</td>
+        <td>${l.linkedinUrl ? `<a href="${escAttr(l.linkedinUrl)}" target="_blank">Voir</a>` : ''}</td>
+        <td>${escText(l.teamSize)}</td>
+        <td>${new Date(l.submittedAt).toLocaleString('fr-FR')}</td>
+      </tr>
+    `).join('')}
+  </table>
+`;
   } catch (err) {
     container.textContent = err.message;
   }
