@@ -1,6 +1,6 @@
 {
   "meta": {
-    "siteTitle": "Adonis — Scripts d'appel personnalisés pour vos commerciaux",
+    "siteTitle": "Adonis - Scripts d'appel personnalisés pour vos commerciaux",
     "calendlyUrl": "https://calendly.com/votre-lien/demo-adonis"
   },
   "nav": {
@@ -9,13 +9,13 @@
   },
   "hero": {
     "eyebrow": "Pour les équipes commerciales B2B SaaS",
-    "headline": "Vos commerciaux composent. Adonis leur dit quoi dire.",
-    "subheadline": "Adonis analyse le profil LinkedIn public de chaque prospect et génère, en quelques secondes, un script d'appel personnalisé livré directement dans HubSpot.",
+    "headline": "Les bons mots, pour le bon prospect",
+    "subheadline": "Adonis analyse le profil LinkedIn public de chaque prospect et génère, en quelques secondes, un script d'appel personnalisé livré directement dans votre CRM.",
     "ctaLabel": "Réserver ma démo",
-    "ctaSubtext": "15 minutes. Sur votre propre prospect.",
+    "ctaSubtext": "",
     "statLabel": "Objectif client",
-    "statValue": "3% → 5%+",
-    "statCaption": "de taux de conversion sur les cold calls"
+    "statValue": "2% → 4%+",
+    "statCaption": "DE TAUX DE CONVERSION SUR LES COLD CALLS"
   },
   "scriptDemo": {
     "eyebrow": "Avant / après",
@@ -26,6 +26,8 @@
         "Bonjour, je me permets de vous appeler au sujet de notre solution...",
         "Nous aidons les entreprises comme la vôtre à améliorer leur productivité...",
         "Est-ce que vous auriez 5 minutes pour en discuter ?"
+        "REFUS CLIENT"
+        "J'ai pas le temps !"
       ]
     },
     "adonis": {
@@ -34,6 +36,8 @@
         "Bonjour Thomas, j'ai vu que vous recrutiez 3 SDR ce trimestre chez [entreprise]...",
         "Sur un profil orienté résultats comme le vôtre, la vraie friction, c'est souvent le temps de prep avant chaque appel...",
         "Je vous propose un point rapide sur comment vos équipes gagnent ce temps-là dès la première semaine."
+        "CLIENT CURIEUX"
+        "Quelles sont vos disponibilités pour un RDV ?"
       ]
     }
   },
@@ -74,7 +78,7 @@
       },
       {
         "number": "03",
-        "title": "Script livré dans HubSpot",
+        "title": "Script livré dans votre CRM",
         "text": "Le commercial ouvre la fiche contact et trouve son script d'approche, prêt à l'emploi, avant de décrocher."
       }
     ]
@@ -89,11 +93,13 @@
       },
       {
         "question": "\"Comment une IA peut évaluer un profil DISC de façon fiable ?\"",
-        "answer": "Le modèle s'appuie uniquement sur des signaux publics et documentés. Chaque script est vérifiable et review avant envoi en configuration standard."
+        "answer": "Le modèle s'appuie uniquement sur des signaux visibles et vérifiables du profil : poste, parcours, formulations utilisées et ton des 
+        publications, grâce à notre IA spécialement entraînée"
       },
       {
         "question": "\"On utilise déjà l'IA, pourquoi Adonis ferait mieux ?\"",
-        "answer": "Adonis ne génère pas du contenu marketing générique : il prépare l'appel à froid, de façon personnalisé, en fonction de votre prospect, et injecte le script directement dans votre CRM."
+        "answer": "Adonis ne génère pas du contenu marketing générique : il prépare l'appel à froid, de façon personnalisé, en fonction de votre prospect, 
+        et injecte le script directement dans votre CRM."
       }
     ]
   },
@@ -105,6 +111,6 @@
     "formSubtitle": "Un membre de l'équipe vous recontacte sous 24h."
   },
   "footer": {
-    "text": "Adonis — Projet réalisé dans le cadre du Bachelor Reconversion CSM, Rocket School Paris."
+    "text": "Adonis — Projet réalisé dans le cadre du Hackaton, Rocket School Paris."
   }
 }
