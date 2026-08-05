@@ -1,21 +1,17 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || 'adonis2026';
-
 const CONTENT_PATH = path.join(__dirname, 'data', 'content.json');
 const LEADS_PATH = path.join(__dirname, 'data', 'leads.json');
-
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 function readJSON(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 }
-
 function writeJSON(filePath, data) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
 }
@@ -62,7 +58,9 @@ app.post('/api/leads', async (req, res) => {
     linkedinUrl: linkedinUrl || '',
     submittedAt: new Date().toISOString()
   };
-  // ... reste de la fonction inchangé
+  try {
+    const store = readJSON(LEADS_PATH);
+    store.leads.push(lead);
     writeJSON(LEADS_PATH, store);
     res.json({ ok: true });
   } catch (err) {
