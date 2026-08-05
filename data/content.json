@@ -93,13 +93,11 @@
       },
       {
         "question": "\"Comment une IA peut évaluer un profil DISC de façon fiable ?\"",
-        "answer": "Le modèle s'appuie uniquement sur des signaux visibles et vérifiables du profil : poste, parcours, formulations utilisées et ton des 
-        publications, grâce à notre IA spécialement entraînée"
+        "answer": "Le modèle s'appuie uniquement sur des signaux visibles et vérifiables du profil : poste, parcours, formulations utilisées et ton des publications, grâce à notre IA spécialement entraînée"
       },
       {
         "question": "\"On utilise déjà l'IA, pourquoi Adonis ferait mieux ?\"",
-        "answer": "Adonis ne génère pas du contenu marketing générique : il prépare l'appel à froid, de façon personnalisé, en fonction de votre prospect, 
-        et injecte le script directement dans votre CRM."
+        "answer": "Adonis ne génère pas du contenu marketing générique : il prépare l'appel à froid, de façon personnalisé, en fonction de votre prospect, et injecte le script directement dans votre CRM."
       }
     ]
   },
