@@ -93,12 +93,18 @@ app.post('/api/leads', async (req, res) => {
     console.error('Erreur sauvegarde locale:', err);
   }
 
+  console.log('HUBSPOT_TOKEN présent ?', !!process.env.HUBSPOT_TOKEN);
+
   if (process.env.HUBSPOT_TOKEN) {
+    console.log('Tentative de création du contact HubSpot pour', lead.email);
     try {
-      await createHubspotContact(lead);
+      const result = await createHubspotContact(lead);
+      console.log('Contact HubSpot créé avec succès, ID:', result.id);
     } catch (err) {
       console.error('Erreur création contact HubSpot:', err.message);
     }
+  } else {
+    console.log('HUBSPOT_TOKEN absent, création HubSpot ignorée.');
   }
 
   res.json({ ok: true });
