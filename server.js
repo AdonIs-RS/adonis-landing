@@ -16,6 +16,32 @@ function writeJSON(filePath, data) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
 }
 
+async function createHubspotContact(lead) {
+  const res = await fetch('https://api.hubapi.com/crm/v3/objects/contacts', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${process.env.HUBSPOT_TOKEN}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      properties: {
+        firstname: lead.name,
+        email: lead.email,
+        company: lead.company,
+        jobtitle: lead.jobTitle,
+        city: lead.location,
+        website: lead.linkedinUrl,
+        taille_equipe_commerciale: lead.teamSize
+      }
+    })
+  });
+  if (!res.ok) {
+    const errText = await res.text();
+    throw new Error(`HubSpot error ${res.status}: ${errText}`);
+  }
+  return res.json();
+}
+
 // --- Contenu de la landing (lecture publique) ---
 app.get('/api/content', (req, res) => {
   try {
@@ -58,14 +84,24 @@ app.post('/api/leads', async (req, res) => {
     linkedinUrl: linkedinUrl || '',
     submittedAt: new Date().toISOString()
   };
+
   try {
     const store = readJSON(LEADS_PATH);
     store.leads.push(lead);
     writeJSON(LEADS_PATH, store);
-    res.json({ ok: true });
   } catch (err) {
-    res.status(500).json({ error: "Impossible d'enregistrer le lead." });
+    console.error('Erreur sauvegarde locale:', err);
   }
+
+  if (process.env.HUBSPOT_TOKEN) {
+    try {
+      await createHubspotContact(lead);
+    } catch (err) {
+      console.error('Erreur création contact HubSpot:', err.message);
+    }
+  }
+
+  res.json({ ok: true });
 });
 
 // --- Consultation des leads (protégée par mot de passe admin) ---
