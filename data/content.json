@@ -41,17 +41,6 @@
       ]
     }
   },
-    "adonis": {
-      "label": "Script Adonis",
-      "lines": [
-        "Bonjour Thomas, j'ai vu que vous recrutiez 3 SDR ce trimestre chez [entreprise]...",
-        "Sur un profil orienté résultats comme le vôtre, la vraie friction, c'est souvent le temps de prep avant chaque appel...",
-        "Je vous propose un point rapide sur comment vos équipes gagnent ce temps-là dès la première semaine."
-        "CLIENT CURIEUX"
-        "Quelles sont vos disponibilités pour un RDV ?"
-      ]
-    }
-  },
   "problem": {
     "eyebrow": "Le constat",
     "title": "Le cold call coûte plus cher qu'il ne rapporte",
