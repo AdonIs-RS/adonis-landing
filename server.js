@@ -47,20 +47,22 @@ app.put('/api/content', (req, res) => {
 });
 
 // --- Collecte de leads (formulaire de contact) ---
-app.post('/api/leads', (req, res) => {
-  const { name, email, company, teamSize } = req.body;
+app.post('/api/leads', async (req, res) => {
+  const { name, email, company, teamSize, jobTitle, location, linkedinUrl } = req.body;
   if (!name || !email) {
     return res.status(400).json({ error: 'Nom et email requis.' });
   }
-  try {
-    const store = readJSON(LEADS_PATH);
-    store.leads.push({
-      name,
-      email,
-      company: company || '',
-      teamSize: teamSize || '',
-      submittedAt: new Date().toISOString()
-    });
+  const lead = {
+    name,
+    email,
+    company: company || '',
+    teamSize: teamSize || '',
+    jobTitle: jobTitle || '',
+    location: location || '',
+    linkedinUrl: linkedinUrl || '',
+    submittedAt: new Date().toISOString()
+  };
+  // ... reste de la fonction inchangé
     writeJSON(LEADS_PATH, store);
     res.json({ ok: true });
   } catch (err) {
