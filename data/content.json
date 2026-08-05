@@ -25,11 +25,22 @@
       "lines": [
         "Bonjour, je me permets de vous appeler au sujet de notre solution...",
         "Nous aidons les entreprises comme la vôtre à améliorer leur productivité...",
-        "Est-ce que vous auriez 5 minutes pour en discuter ?"
-        "REFUS CLIENT"
+        "Est-ce que vous auriez 5 minutes pour en discuter ?",
+        "REFUS CLIENT",
         "J'ai pas le temps !"
       ]
     },
+    "adonis": {
+      "label": "Script Adonis",
+      "lines": [
+        "Bonjour Thomas, j'ai vu que vous recrutiez 3 SDR ce trimestre chez [entreprise]...",
+        "Sur un profil orienté résultats comme le vôtre, la vraie friction, c'est souvent le temps de prep avant chaque appel...",
+        "Je vous propose un point rapide sur comment vos équipes gagnent ce temps-là dès la première semaine.",
+        "CLIENT CURIEUX",
+        "Quelles sont vos disponibilités pour un RDV ?"
+      ]
+    }
+  },
     "adonis": {
       "label": "Script Adonis",
       "lines": [
