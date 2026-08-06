@@ -67,7 +67,7 @@
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen>
 </iframe>
-  
+
 <section class="problem">
   <div class="section-inner">
     <p class="eyebrow" id="problem-eyebrow"></p>
@@ -103,16 +103,22 @@
       <h3 id="form-title"></h3>
       <p class="form-sub" id="form-sub"></p>
       <form id="lead-form">
-  <input type="text" name="name" placeholder="Nom" required />
-  <input type="email" name="email" placeholder="Email professionnel" required />
-  <input type="text" name="company" placeholder="Entreprise" />
-  <input type="text" name="teamSize" placeholder="Taille de l'équipe commerciale" />
-  <input type="text" name="jobTitle" placeholder="Poste / fonction" />
-  <input type="text" name="location" placeholder="Localisation" />
-  <input type="url" name="linkedinUrl" placeholder="URL de votre profil LinkedIn (facultatif)" />
-  <button type="submit">Envoyer</button>
-  <p class="form-message" id="form-message"></p>
-</form>
+        <input type="text" name="name" placeholder="Nom" required />
+        <input type="email" name="email" placeholder="Email professionnel" required />
+        <input type="text" name="company" placeholder="Entreprise" />
+        <input type="text" name="teamSize" placeholder="Taille de l'équipe commerciale" />
+        <select name="jobTitle" required>
+          <option value="" disabled selected>Secteur d'activité</option>
+          <option value="SaaS Produit">SaaS Produit</option>
+          <option value="Agence Growth Marketing">Agence Growth Marketing</option>
+          <option value="Cabinet de conseil">Cabinet de conseil</option>
+          <option value="Autre">Autre</option>
+        </select>
+        <input type="text" name="location" placeholder="Localisation" />
+        <input type="url" name="linkedinUrl" placeholder="URL de votre profil LinkedIn (facultatif)" />
+        <button type="submit">Envoyer</button>
+        <p class="form-message" id="form-message"></p>
+      </form>
     </div>
   </div>
 </section>
@@ -122,14 +128,5 @@
 </footer>
 
 <script src="script.js"></script>
-<script>
-  document.querySelectorAll('#nav-cta, #hero-cta, #final-cta-btn').forEach(function(el) {
-    el.addEventListener('click', function() {
-      if (typeof gtag === 'function') {
-        gtag('event', 'clic_reserver_demo', { emplacement: el.id });
-      }
-    });
-  });
-</script>
 </body>
 </html>
